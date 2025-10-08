@@ -1,0 +1,297 @@
+/* fonte geral e fundo */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  position: relative;
+  background: url('../images/bricks.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #0d0d0d;
+  color: white;
+  padding-top: 40px;
+  font-family: 'Press Start 2P', cursive;
+  overflow: hidden;
+}
+
+/* camada escura sobre o fundo */
+.container::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* escurece os tijolos */
+  z-index: -1;
+}
+
+/* menu superior */
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  max-width: 900px;
+  background-color: #111;
+  border: 3px solid red;
+  border-radius: 15px;
+  padding: 20px 0;
+  box-shadow: 0 0 25px red;
+  margin-bottom: 40px;
+}
+
+/* blocos individuais do menu */
+.menu-time,
+.menu-score,
+.menu-lives {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* textos do menu */
+.menu h2 {
+  margin: 0;
+  font-size: 14px;
+  color: red;
+}
+
+.menu h2:last-child {
+  font-size: 18px;
+  color: white;
+}
+
+/* número de vidas */
+.menu-lives h2:last-child {
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 0 0 10px red;
+}
+
+/* ícone de vida */
+.menu-lives img {
+  width: 40px;
+  height: auto;
+}
+
+/* área do jogo */
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* grade de blocos */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  gap: 20px;
+  background: rgba(20, 20, 20, 0.7);
+  border: 4px solid red;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 30px red;
+}
+
+/* blocos onde o Ralph aparece */
+.square {
+  width: 150px;
+  height: 150px;
+  background-color: #222;
+  border: 2px solid #444;
+  border-radius: 10px;
+  transition: 0.2s;
+  cursor: crosshair;
+}
+
+.square:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* quando o Ralph aparece */
+.enemy {
+  background: url('../images/ralph.png') no-repeat center center;
+  background-size: contain;
+}
+/* fonte geral e fundo */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  position: relative;
+  background: url('../images/bricks.png') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #0d0d0d;
+  color: white;
+  padding-top: 40px;
+  font-family: 'Press Start 2P', cursive;
+  overflow: hidden;
+}
+
+/* camada escura sobre o fundo */
+.container::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+/* menu superior */
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  max-width: 900px;
+  background-color: #111;
+  border: 3px solid red;
+  border-radius: 15px;
+  padding: 20px 0;
+  box-shadow: 0 0 25px red;
+  margin-bottom: 40px;
+}
+
+/* blocos individuais do menu */
+.menu-time,
+.menu-score,
+.menu-lives {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* textos do menu */
+.menu h2 {
+  margin: 0;
+  font-size: 14px;
+  color: red;
+}
+
+.menu h2:last-child {
+  font-size: 18px;
+  color: white;
+}
+
+/* número de vidas */
+.menu-lives h2:last-child {
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 0 0 10px red;
+}
+
+/* ícone de vida */
+.menu-lives img {
+  width: 40px;
+  height: auto;
+}
+
+/* área do jogo */
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* grade de blocos */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+  gap: 20px;
+  background: rgba(20, 20, 20, 0.7);
+  border: 4px solid red;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 30px red;
+}
+
+/* blocos do prédio */
+.square {
+  width: 150px;
+  height: 150px;
+  background: url('../images/window.png') no-repeat center center;
+  background-size: cover;
+  border: 2px solid #444;
+  border-radius: 10px;
+  transition: 0.2s;
+  cursor: crosshair;
+  position: relative;
+  overflow: hidden;
+}
+
+.square:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* Ralph aparecendo — com animação de salto */
+.enemy {
+  background: 
+    url('../images/ralph.png') no-repeat center center,
+    url('../images/window.png') no-repeat center center;
+  background-size: 110%, cover;
+  border: 2px solid red;
+  box-shadow: 0 0 25px red;
+  animation: bounce 0.5s ease-out;
+  transform: translateY(-10px) scale(1.1);
+}
+
+/* animação do “pulo” */
+@keyframes bounce {
+  0% {
+    transform: translateY(15px) scale(0.9);
+    filter: brightness(0.8);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.15);
+    filter: brightness(1.2);
+  }
+  100% {
+    transform: translateY(0) scale(1.1);
+    filter: brightness(1);
+  }
+}
+/* botão de início do jogo */
+.start-btn {
+  font-family: 'Press Start 2P', cursive;
+  background-color: #43ff2a;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  margin-top: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: transform 0.15s, background-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 0 #158d0a;
+  outline: none;
+  align-self: flex-start;
+  position: relative;
+}
+
+.start-btn:hover {
+  transform: translateY(-3px);
+  background-color: #07e907;
+  box-shadow: 0 6px 0 #4ea71b;
+}
+
+.start-btn:active {
+  transform: translateY(2px);
+  background-color: #c0392b;
+  box-shadow: 0 2px 0 #a71e1b;
+}
