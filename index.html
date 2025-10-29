@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- Font Press Start 2P -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/pokedex.css">
+</head>
+
+<body>
+    <main class="pokedex-container">
+        <div class="pokedex-left">
+            <div class="screen">
+                <img id="pokemonImage" src="" alt="Pokémon">
+            </div>
+            <div class="controls">
+                <button id="prevButton" class="btn">◀</button>
+                <button id="nextButton" class="btn">▶</button>
+            </div>
+        </div>
+
+        <div class="pokedex-right">
+            <h1 id="pokemonName">Nome</h1>
+            <span id="pokemonNumber">#000</span>
+            <div id="pokemonTypes" class="types"></div>
+
+            <div class="details">
+                <p><strong>Altura:</strong> <span id="pokemonHeight">0.0 m</span></p>
+                <p><strong>Peso:</strong> <span id="pokemonWeight">0.0 kg</span></p>
+                <p><strong>Base XP:</strong> <span id="pokemonXP">0</span></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/pokemon-model.js"></script>
+    <script src="assets/js/poke-api.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
